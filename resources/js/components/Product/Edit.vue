@@ -1,20 +1,12 @@
 <template>
     <div class="m-3">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Product</li>
-        </ol>
-        <div class="row m-1">
+        <div class="row m-3">
          <div class="card cards-top col-lg-12">
-            <div class="card-header d-flex justify-content-between">
+            <div class="cards-head d-flex justify-content-between">
                 <div>
-                    <i class="fas fa-chart-area"></i>
-                    Product Update 
+                    <h3><b>Product Update  </b></h3>
                 </div>
-                <router-link to="/all/product" class="btn btn-info text-white" id="add_new"> All Product</router-link>
+                <router-link to="/all/product" class="btn btn-add btn-info text-white" id="add_new"><i class="fas fa-eye"></i> All Product</router-link>
             </div>
             <form @submit.prevent="productUpdate">
                 <div class="card-body">
@@ -179,5 +171,21 @@
   }
   .cards-top{
     padding: 0px!important;
+  }
+  .card{
+    padding: 20px!important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .card-body{
+    padding: 0px!important;
+  }
+  .cards-head{
+    margin-bottom: 20px;
+  }
+  .btn-add{
+    border-radius: 5rem;
+  }
+  button{
+    margin: 0px!important;
   }
 </style>

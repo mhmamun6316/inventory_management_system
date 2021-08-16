@@ -1,18 +1,10 @@
 <template>
     <div class="m-3">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Stock</li>
-        </ol>
-        <div class="row m-1">
+        <div class="row m-3">
          <div class="card cards-top col-lg-12">
-            <div class="card-header d-flex justify-content-between">
+            <div class="cards-head d-flex justify-content-between">
                 <div>
-                    <i class="fas fa-chart-area"></i>
-                    Product Stock Update 
+                    <h3><b>Product Stock Update  </b></h3>
                 </div>
             </div>
             <form @submit.prevent="StockUpdate">
@@ -77,5 +69,18 @@
   }
   .cards-top{
     padding: 0px!important;
+  }
+  .card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px!important;
+  }
+  .card-body{
+    padding: 0px!important;
+  }
+  .cards-head{
+    margin-bottom: 20px;
+  }
+  button{
+    margin: 0px!important;
   }
 </style>

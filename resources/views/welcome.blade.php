@@ -16,7 +16,7 @@
     <body class="sb-nav-fixed">
         <div id="app">
             <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark" v-show="$route.path === '/' || $route.path === '/register' || $route.path ==='/forget' ? false : true ">
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html">Inventory Management</a>
                 <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
                 <!-- Navbar Search-->
                 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -46,18 +46,18 @@
                         <div class="sb-sidenav-menu">
                             <div class="nav">
 
-                                <router-link class="nav-link" to="/home">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt fa-2x"></i></div>
+                                <router-link class="nav-link mt-2" to="/home">
+                                    <div class="sb-nav-link-icon text-white"><i class="fas fa-tachometer-alt nav-image"></i></div>
                                     Dashboard
                                 </router-link>
 
-                                <router-link class="nav-link bg-danger" to="/pos">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-cart-plus fa-2x"></i></div>
-                                    <span class="text-white"><b>POS</b></span>
+                                <router-link class="nav-link pos" to="/pos">
+                                    <div class="sb-nav-link-icon text-white"><i class="fas fa-cart-plus nav-image"></i></div>
+                                    <span><b>POS</b></span>
                                 </router-link>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-user-circle fa-2x"></i></div>
+                                    <div class="sb-nav-link-icon"><img src="backend/img/employee.png" class="nav-image" alt=""></div>
                                     <span>Employee</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -69,7 +69,7 @@
                                 </div>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon"><i class="far fa-user-circle fa-2x"></i></div>
+                                    <div class="sb-nav-link-icon"><img src="backend/img/supplier.png" class="nav-image" alt=""></div>
                                     <span>Suppliers</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -81,7 +81,7 @@
                                 </div>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts22" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon"><i class="far fa-user fa-2x"></i></div>
+                                    <div class="sb-nav-link-icon"><img src="backend/img/customer.png" class="nav-image" alt=""></div>
                                     <span>Customers</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -93,7 +93,7 @@
                                 </div>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-certificate fa-2x"></i></div>
+                                    <div class="sb-nav-link-icon text-white"><i class="fas fa-certificate nav-image"></i></div>
                                     <span>Categories</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -105,7 +105,7 @@
                                 </div>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts4" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-suitcase-rolling fa-2x"></i></div>
+                                    <div class="sb-nav-link-icon text-white"><i class="fas fa-suitcase-rolling nav-image"></i></div>
                                     <span>Products</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -117,7 +117,7 @@
                                 </div>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts5" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon"><i class="far fa-lightbulb fa-2x"></i></div>
+                                    <div class="sb-nav-link-icon text-white"><i class="far fa-lightbulb nav-image"></i></div>
                                     <span>Expenses</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -129,7 +129,7 @@
                                 </div>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts6" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon"><i class="fas fa-dollar-sign fa-2x"></i></div>
+                                    <div class="sb-nav-link-icon text-white"><i class="fas fa-dollar-sign nav-image"></i></div>
                                     <span>Salaries</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -141,12 +141,12 @@
                                 </div>
 
                                 <router-link class="nav-link" to="/stock">
-                                <div class="sb-nav-link-icon"><i class="fas fa-cubes fa-2x"></i></div>
+                                <div class="sb-nav-link-icon text-white"><i class="fas fa-cubes nav-image"></i></div>
                                  <span class="ml-1">Stock</span>
                                 </router-link>
 
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts17" aria-expanded="false" aria-controls="collapseLayouts">
-                                     <div class="sb-nav-link-icon"><i class="fas fa-shopping-basket fa-2x"></i></div>
+                                     <div class="sb-nav-link-icon text-white"><i class="fas fa-shopping-basket nav-image"></i></div>
                                     <span>Orders</span>
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>

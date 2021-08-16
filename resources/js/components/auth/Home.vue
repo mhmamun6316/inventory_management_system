@@ -1,56 +1,146 @@
 <template>
         <div>
             <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
+                    <div class="container-fluid px-4 mt-5">
                         <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">{{totalSale}} Taka</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Todays Total Sell</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Todays Total Sell</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalSale}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">{{income}} Taka</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Total Income</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                               Todays Total Income</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{income}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Todays Total Due
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{due}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">{{due}} Taka</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Total Due</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Total Expense</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{expense}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">{{expense}} Taka</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Total Expense</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
+                          </div>
                         </div>
                     </div> 
-                    <div class="card mb-4">
-                      <div class="card-header tables-header">
-                         </div>
+                    <div class="container-fluid px-4 mt-2">
+                        <div class="row">
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Monthly Total Sell</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalmonth}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                               Monthly Total Income</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalmonthpay}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Monthly Total Due
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalmonthdue}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Monthly Total Expense</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{totalmonthexpense}} Taka</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div> 
+                    <div class="card  m-4">
                             <div class="card-body">
                               <div class="table-responsive">
-                                <table id="datatablesSimple" class="table table-bordered text-center" width="100%" cellspacing="0">
+                                <table id="datatablesSimple" class="table table-hover table-bordered text-center" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>SL</th>
@@ -73,9 +163,9 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                              </div>
                             </div>
-                        </div> 
+                        </div>
+                    </div> 
             </main>
             <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
@@ -107,6 +197,10 @@
             due:'',
             expense:'',
             stockOuts:'',
+            totalmonth:'',
+            totalmonthpay:'',
+            totalmonthdue:'',
+            totalmonthexpense:'',
           }
     },
     mounted(){
@@ -115,6 +209,10 @@
         this.TodayDue();
         this.TodayExpense();
         this.stockOut();
+        this.TotalmonthSell();
+        this.TotalmonthPay();
+        this.TotalmonthDue();
+        this.TotalmonthExpense();
     },
     methods:{
         TodaySell(){
@@ -141,6 +239,26 @@
             axios.get('api/stockout')
             .then(({data})=>(this.stockOuts=data))
             .catch()
+        },
+        TotalmonthSell(){
+            axios.get('api/total/month/sell')
+            .then(({data})=>(this.totalmonth=data))
+            .catch()
+        },
+        TotalmonthPay(){
+            axios.get('api/total/month/pay')
+            .then(({data})=>(this.totalmonthpay=data))
+            .catch()
+        },
+        TotalmonthDue(){
+            axios.get('api/total/month/due')
+            .then(({data})=>(this.totalmonthdue=data))
+            .catch()
+        },
+        TotalmonthExpense(){
+            axios.get('api/total/month/expense')
+            .then(({data})=>(this.totalmonthexpense=data))
+            .catch()
         }
     }
 }
@@ -150,5 +268,23 @@
     #em_photo{
     height: 40px;
     width: 40px;
+  }
+  .border-left-primary{
+      border-left: 5px solid #0275d8;
+  }
+  .border-left-success{
+      border-left: 5px solid #5cb85c;
+  }
+  .border-left-info{
+      border-left: 5px solid #5bc0de;
+  }
+  .border-left-warning{
+      border-left: 5px solid #f0ad4e;
+  }
+  .card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .card-body{
+    padding: 20px!important;
   }
 </style>

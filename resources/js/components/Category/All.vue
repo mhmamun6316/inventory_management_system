@@ -1,25 +1,14 @@
 <template>
     <div class="m-3">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Category</li>
-        </ol>
-        <div class="row m-1">
+        <div class="row m-3">
          <div class="card cards-top col-lg-12">
-            <div class="card-header d-flex justify-content-between">
+            <div class="cards-head d-flex justify-content-between">
                     <div>
-                        <i class="fas fa-chart-area"></i>
-                       All Category 
+                       <h3><b>All Category</b></h3>
                     </div>
-                    <router-link to="/create/category" class="btn btn-info text-white" id="add_new"> Add New Category</router-link>
+                    <router-link to="/create/category" class="btn btn-add btn-info text-white" id="add_new"><i class="fas fa-plus mr-1"></i>  Add New Category</router-link>
             </div>
-         </div>
-        <div class="card mb-4">
-              <div class="card-header tables-header">
-               </div>
-                            <div class="card-body">
+            <div class="card-body">
                               <div class="table-responsive">
                                 <table id="datatablesSimple" class="table table-bordered text-center" width="100%" cellspacing="0">
                                     <thead>
@@ -43,7 +32,7 @@
                                 </table>
                               </div>
                             </div>
-                        </div>              
+            </div>              
         </div>
     </div>
 </template>
@@ -110,5 +99,17 @@
   }
   .cards-top{
     padding: 0px!important;
+  }
+   .card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .cards-head{
+    padding: 20px;
+  }
+  .card-body{
+    padding: 20px!important;
+  }
+  .btn-add{
+    border-radius: 5rem;
   }
 </style>

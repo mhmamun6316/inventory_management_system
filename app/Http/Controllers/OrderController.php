@@ -52,11 +52,34 @@ class OrderController extends Controller
     	return response()->json($order);
     }
 
-    public function SearchMonth(request $request){
-    	$month=$request->month;
-    	return response()->json($month);
+    //Monthwise All Total
+    public function TotalMonthSale(request $request){
+    	$month=date('F');
+        $total=DB::table('orders')->where('order_month',$month)->sum('total');
+    	return response()->json($total);
     }
 
+    public function TotalMonthPay(request $request){
+    	$month=date('F');
+        $total=DB::table('orders')->where('order_month',$month)->sum('pay');
+    	return response()->json($total);
+    }
+
+    public function TotalMonthDue(request $request){
+    	$month=date('F');
+        $total=DB::table('orders')->where('order_month',$month)->sum('due');
+    	return response()->json($total);
+    }
+
+    public function TotalMonthExpense(request $request){
+    	$month=date('F');
+        $total=DB::table('expenses')->where('expense_month',$month)->sum('amount');
+    	return response()->json($total);
+    }
+
+
+
+    //Day Wise Total
     public function TodaySale(){
         $date=date('d/m/Y');
         $total=DB::table('orders')->where('order_date',$date)->sum('total');

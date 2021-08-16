@@ -24,6 +24,7 @@ class ExpenseController extends Controller
         $expense = new Expense;
         $expense->details = $request->details;
         $expense->amount = $request->amount;
+        $expense->expense_month = date('F');
         $expense->expense_date = date('d/m/Y');
         $expense->save();
     }

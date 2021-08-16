@@ -1,19 +1,13 @@
  <template>
-    <div>
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Search Order</li>
-        </ol>
+    <div class="m-3">
         <!-- Icon Cards-->
-       <div class="row container">
+       <div class="row container m-3">
          <div class="card col-lg-12">
-          <div class="card-header">
-            <i class="fas fa-chart-area"></i>
-            Search Orders 
-            <router-link to="/order" class="btn btn-sm btn-info" id="add_new">Today Order</router-link>
+          <div class="cards-head d-flex justify-content-between">
+            <div>
+                <h3><b> Search Orders  </b></h3>
+            </div>
+            <router-link to="/order" class="btn btn-add btn-info" id="add_new"><i class="fas fa-eye"></i> Today Order</router-link>
           </div>
           <div class="row">
           	<div class="col-lg-6">
@@ -36,13 +30,12 @@
             </div>
             <div class="row m-1 mt-2">
                 <div class="card col-lg-12">
-                <div class="card-header">
-                    <i class="fas fa-chart-area"></i>
-                     Order  Details 
+                <div class="cards-head">
+                    <h3><b> Order  Details  </b></h3>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="table-responsive">
+                        <div class="table-responsive table-hover">
                         <br>
                             <table class="table table-bordered" id="" width="100%" cellspacing="0">
                             <thead>
@@ -158,9 +151,25 @@
   
 </script>
 
-<style>
-	
+<style scoped>
+
 #add_new{
 	float: right;
 }
+  .card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px!important;
+  }
+  .card-body{
+    padding: 0px!important;
+  }
+  .cards-head{
+    margin-bottom: 20px;
+  }
+  .btn-add{
+    border-radius: 5rem;
+  }
+  button{
+    margin-left:7px!important;
+  }
 </style>

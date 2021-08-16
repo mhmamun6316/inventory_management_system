@@ -1,19 +1,11 @@
  <template>
-    <div>
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Employee</li>
-        </ol>
+    <div class="m-3">
         <!-- Icon Cards-->
-       <div class="row container">
+       <div class="row container m-3">
          <div class="card col-lg-12">
-          <div class="card-header d-flex justify-content-between">
+          <div class="cards-head d-flex justify-content-between">
             <div>
-                <i class="fas fa-chart-area"></i>
-                Employee Update 
+                <h3><b>Employee Update </b></h3>
             </div>
           </div>
           <div class="card-body">
@@ -123,5 +115,16 @@
   }
   .cards-top{
     padding: 0px!important;
+    margin-bottom: 20px;
+  }
+  .card-body{
+    padding: 0px!important;
+  }
+  .card{
+    padding: 20px!important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .btn-add{
+    border-radius: 5rem;
   }
 </style>

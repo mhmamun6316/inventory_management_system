@@ -205,6 +205,38 @@ sub {
 sup {
   top: -0.5em;
 }
+/* custom css for wellcome page */
+.pos{
+  background-color: #2e86de;
+  color: white!important;
+  padding: 10px 15px!important;
+  margin: 5px 5px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(42, 1, 109, 0.979);
+}
+.nav .router-link-active{
+  background-color: #5f27cd;
+  color: white!important;
+  padding: 10px 15px!important;
+  margin: 0px 5px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(42, 1, 109, 0.979);
+}
+.nav .nav-link:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white!important;
+  padding: 10px 15px!important;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.nav .nav-link{
+  padding: 10px 15px!important;
+  margin: 5px 5px;
+}
+.nav .nav-link .nav-image{
+  height: 25px;
+  width: 25px;
+}
 
 a {
   color: #0d6efd;

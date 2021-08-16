@@ -1,22 +1,15 @@
 <template>
-    <div class="m-3">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Point Of Sale</li>
-        </ol>
-        <div class="row">
+    <div class="m-2">
+        <div class="row m-1">
               <div class="col-md-5 col-lg-5">
                 <div class="row m-1">
                     <div class="card mb-4">
-                        <div class="card-header">
+                        <div class="cards-head">
                             <div class="d-flex justify-content-between">
                                 <div>
-                                <i class="fas fa-chart-area"></i>
-                                Customer Insert 
+                                <h3><b>Customer Insert </b></h3>
                                 </div>
-                                <a class="btn btn-sm btn-info" data-toggle="modal" data-target="#exampleModal" id="add_new"> Add Customer</a>
+                                <a class="btn btn-add text-white btn-info" data-toggle="modal" data-target="#exampleModal" id="add_new"><i class="fas fa-eye"></i> Add Customer</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -45,7 +38,7 @@
                          </tbody>
                          </table>
                         </div>
-                        <div class="card-footer">
+                        <div>
                             <ul class="list-group">
                                 <li class="subTotal list-group-item">
                                 Total Quantity:
@@ -158,10 +151,6 @@
               <div class="col-md-7 col-lg-7">
                 <div class="row m-1">
                     <div class="card mb-4">
-                        <div class="card-header tables-header">
-                            <i class="fas fa-chart-area"></i>
-                                Products
-                        </div>
                         <!-- Category Wise Products -->
                         <ul class="nav nav-pills mb-3 mt-3" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -181,7 +170,7 @@
                                         </div>
                                         <div class="col-md-3 col-sm-6" v-for="product in filtersearch" :key="product.id">
                                             <div class="card card-product" >
-                                            <button class="btn bt-sm" @click.prevent="AddToCart(product.id)" v-if="product.product_quantity>=1">
+                                            <button class="btn btn-sm" @click.prevent="AddToCart(product.id)" v-if="product.product_quantity>=1">
                                                 <td class="productIMage"><img :src="`/${product.image}`"  id="em_photo"></td>
                                                 <div class="card-body mm">
                                                     <h5 class="card-title">{{ product.Product_name}}</h5>
@@ -189,7 +178,7 @@
                                                     <span v-else class="badge badge-danger">Stock Out</span>
                                                 </div>
                                             </button>
-                                            <button class="btn bt-sm" v-else disabled>
+                                            <button class="btn btn-sm" v-else disabled>
                                                 <td class="productIMage"><img :src="`/${product.image}`"  id="em_photo"></td>
                                                 <div class="card-body mm">
                                                     <h5 class="card-title">{{ product.Product_name}}</h5>
@@ -216,7 +205,7 @@
                                         <td class="productIMage"><img :src="`/${getproduct.image}`"  id="em_photo"></td>
                                         <div class="card-body mm">
                                             <h5 class="card-title">{{ getproduct.Product_name }}</h5>
-                                            <span class="badge badge-success" v-if="getproduct.product_quantity >= 1"> Availble ({{ getproduct.product_quantity }}) </span>
+                                            <span class="badge badge-success" v-if="getproduct.product_quantity >= 1"> Available ({{ getproduct.product_quantity }}) </span>
                                             <span class="badge badge-danger" v-else>Stock Out</span>
                                         </div>
                                     </button>
@@ -224,7 +213,7 @@
                                          <td class="productIMage"><img :src="`/${getproduct.image}`"  id="em_photo"></td>
                                         <div class="card-body mm">
                                             <h5 class="card-title">{{ getproduct.Product_name }}</h5>
-                                            <span class="badge badge-success" v-if="getproduct.product_quantity >= 1"> Availble ({{ getproduct.product_quantity }}) </span>
+                                            <span class="badge badge-success" v-if="getproduct.product_quantity >= 1"> Available ({{ getproduct.product_quantity }}) </span>
                                             <span class="badge badge-danger" v-else>Stock Out</span>
                                         </div>
                                     </button>
@@ -315,7 +304,7 @@
             axios.get('/api/addTocart/'+id)
             .then(() => {
               Reload.$emit('AfterAdd');
-              Notification.success()
+              Notification.cart_success()
             })
           },
           AllCart(){
@@ -327,21 +316,21 @@
               axios.get('/api/removeCart/'+id)
              .then(() => {
               Reload.$emit('AfterAdd');
-              Notification.success()
+              Notification.cart_delete()
             })
           },
           increment(id){
             axios.get('/api/increment/'+id)
             .then(() => {
                Reload.$emit('AfterAdd');
-               Notification.success()
+               Notification.cart_increment()
             })
           },
           decrement(id){
             axios.get('/api/decrement/'+id)
             .then(() => {
                Reload.$emit('AfterAdd');
-               Notification.success()
+               Notification.cart_decrement()
             })
           },
           vat(){
@@ -433,5 +422,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+  }
+   .card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-bottom: 20px;
+  }
+  .cards-head{
+    padding: 20px;
+  }
+  .card-body{
+    padding: 20px!important;
+  }
+  .btn-add{
+    border-radius: 5rem;
   }
 </style>

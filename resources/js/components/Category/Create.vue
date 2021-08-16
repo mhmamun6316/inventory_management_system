@@ -1,20 +1,12 @@
 <template>
     <div class="m-3">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Category</li>
-        </ol>
-        <div class="row m-1">
+        <div class="row m-3">
          <div class="card cards-top col-lg-12">
-            <div class="card-header d-flex justify-content-between">
+            <div class="cards-head d-flex justify-content-between">
                 <div>
-                    <i class="fas fa-chart-area"></i>
-                    Category Insert 
+                    <h3><b>Category Insert </b></h3>
                 </div>
-                <router-link to="/all/category" class="btn btn-info text-white" id="add_new"> All Category</router-link>
+                <router-link to="/all/category" class="btn btn-add btn-info text-white" id="add_new"><i class="fas fa-eye"></i> All Category</router-link>
             </div>
             <form @submit.prevent="CategoryInsert" >
                 <div class="card-body">
@@ -71,5 +63,14 @@
   }
   .cards-top{
     padding: 0px!important;
+  }
+   .card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .cards-head{
+    padding: 20px;
+  }
+  .btn-add{
+    border-radius: 5rem;
   }
 </style>

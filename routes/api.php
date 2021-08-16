@@ -41,11 +41,16 @@ Route::get('/orders','OrderController@TodayOrder');
 Route::get('/order/details/{id}','OrderController@OrderDetails');
 Route::get('/order/orderdetails/{id}','OrderController@OrderDetailsAll');
 Route::post('/search/date','OrderController@SearchOrderDate');
-Route::post('/search/month','OrderController@SearchMonth');
 
-// Home route
+// Home route (todays)
 Route::get('/today/sell','OrderController@TodaySale');
 Route::get('/today/income','OrderController@TodayIncome');
 Route::get('/today/due','OrderController@TodayDue');
 Route::get('/today/expense','OrderController@TodayExpense');
 Route::get('/stockout','OrderController@Stockout');
+
+// Home route(months)
+Route::get('/total/month/sell','OrderController@TotalMonthSale');
+Route::get('/total/month/pay','OrderController@TotalMonthPay');
+Route::get('/total/month/due','OrderController@TotalMonthDue');
+Route::get('/total/month/expense','OrderController@TotalMonthExpense');
